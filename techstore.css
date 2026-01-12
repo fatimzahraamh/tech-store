@@ -1,0 +1,212 @@
+:root {
+
+    --ctp-base: #eff1f5;
+    --ctp-mantle: #e6e9ef;
+    --ctp-crust: #dce0e8;
+
+    --ctp-text: #4c4f69;
+    --ctp-subtext1: #5c5f77;
+    --ctp-subtext0: #6c6f85;
+
+
+    --ctp-rosewater: #dc8a78;
+    --ctp-flamingo: #898181;
+    --ctp-pink: #ea76cb;
+    --ctp-mauve: #af85e7;
+    --ctp-peach: #898181;
+    --ctp-yellow: #686868;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--ctp-base);
+    color: var(--ctp-text);
+    display: flex;
+    height: 100vh;
+}
+
+
+.sidebar {
+    width: 250px;
+    background-color: var(--ctp-mantle);
+    color: var(--ctp-text);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--ctp-mauve);
+    font-weight: bold;
+}
+
+.menu button {
+    background: none;
+    border: none;
+    color: var(--ctp-text);
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--ctp-crust);
+    transition: background 0.2s;
+}
+
+.menu button:hover {
+    background-color: var(--ctp-crust);
+}
+
+.menu button.active {
+    background-color: var(--ctp-subtext0);
+    color: var(--ctp-base);
+}
+
+
+.main-content {
+    margin-left: 250px;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+header {
+    background-color: var(--ctp-crust);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+
+section {
+    display: none;
+
+}
+
+section.active {
+    display: block;
+
+}
+
+
+.kpi-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: var(--ctp-base);
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    border: 1px solid var(--ctp-mauve);
+}
+
+.card h3 {
+    color: var(--ctp-subtext1);
+}
+
+.card .value {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+input,
+select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid var(--ctp-crust);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background: var(--ctp-base);
+    color: var(--ctp-text);
+}
+
+button.btn {
+    padding: 10px 20px;
+    background-color: var(--ctp-peach);
+    color: var(--ctp-base);
+    border: 1px solid var(--ctp-mauve);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: var(--ctp-yellow);
+}
+
+button.btn-danger {
+    background-color: var(--ctp-flamingo);
+    color: var(--ctp-base);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--ctp-base);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--ctp-crust);
+}
+
+th {
+    background-color: var(--ctp-mauve);
+    color: var(--ctp-base);
+}
+
+
+.modal {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--ctp-base);
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    border: 1px solid var(--ctp-crust);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--ctp-peach);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    border: 1px solid var(--ctp-crust);
+}
